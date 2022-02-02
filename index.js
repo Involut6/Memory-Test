@@ -85,6 +85,6 @@ function startOver() {
   started = false;
 }
 
-$(document).click(function() {
+$(document).dblclick(function() {
   $(".instructions").remove();
 })
