@@ -16,7 +16,7 @@ $(document).click(function() {
   }
 })
 
-$(".btn").click(function() {
+$(".btn").dblclick(function() {
   var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
 
@@ -74,7 +74,7 @@ function checkAnswer(currentLevel) {
     setTimeout(function() {
       $("body").removeClass("game-over");
     }, 200);
-    $("h1").text("Game Over, Click to Restart.")
+    $("h1").text("Game Over, Double-Click to Restart.")
     startOver();
   }
 }
