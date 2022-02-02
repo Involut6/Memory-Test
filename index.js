@@ -8,7 +8,7 @@ var level = 0;
 
 started = false;
 
-$(document).keydown(function() {
+$(document).dblclick(function() {
   if (!started) {
     $("h1").text("Level " + level);
     nextSequence();
@@ -74,7 +74,7 @@ function checkAnswer(currentLevel) {
     setTimeout(function() {
       $("body").removeClass("game-over");
     }, 200);
-    $("h1").text("Game Over, Press any key to Restart.")
+    $("h1").text("Game Over, Double-Click to Restart.")
     startOver();
   }
 }
@@ -85,6 +85,6 @@ function startOver() {
   started = false;
 }
 
-$(document).dblclick(function() {
+$(document).click(function() {
   $(".instructions").remove();
 })
